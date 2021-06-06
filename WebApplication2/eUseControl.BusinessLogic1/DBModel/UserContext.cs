@@ -10,7 +10,7 @@ namespace eUseControl.BusinessLogic1.DBModel
 {
     class UserContext : DbContext
     {
-        public UserContext() : base("WebApplication2")
+        public UserContext() : base("myDatabaseApp")
         {
         }
         public virtual DbSet<UDbtable> Users { get; set; }

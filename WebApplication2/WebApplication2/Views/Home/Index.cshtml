@@ -3,7 +3,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @using System.Web.Optimization
-
+@model WebApplication2.Models.UserData
 <!-- Start your project here-->
 <header>
     <nav class="navbar navbar-light w-100 px-0">
@@ -17,13 +17,29 @@
                 Antares Consulting
             </a>
             <button type="button" class="btn btn-light">
-                <a href="@Url.Action("Contuct_Us","Contact")">
-                    Contact Us
+                <a href="@Url.Action("Index","Contact")">
+                    Contact
+                </a>
+            </button>
+            <button type="button" class="btn btn-light">
+                <a href="@Url.Action("Test","Test")">
+                    Test
+                </a>
+            </button>
+            <button type="button" class="btn btn-light">
+                <a href="@Url.Action("Index","Login")">
+                    LogIn
                 </a>
             </button>
         </div>
     </nav>
     <!-- Navbar -->
+    @if (Html.ViewData.Model.Username == "Admin")
+    {
+        <p>Hello world</p>
+    }
+
+
     <!-- Full Page Intro -->
     <div class="view">
         <img src="~/img/background_image.png" alt="" class="myimage">
@@ -71,14 +87,7 @@
                         <!--Grid row-->
                         <div class="row py-3">
                             <div class="col-10 w-100">
-                                <a class="btn mybg text-white" href="#" role="button"> <h6> Налоговое консультирование </h6></a>
-                            </div>
-                        </div>
-                        <!--Grid row-->
-                        <!--Grid row-->
-                        <div class="row py-3">
-                            <div class="col-10 w-100">
-                                <a class="btn mybg text-white" href="#" role="button"> <h6> Налоговое консультирование </h6></a>
+                                <a class="btn mybg text-white" href="#" role="button"> <h6> Отзывы о нас  </h6></a>
                             </div>
                         </div>
                         <!--Grid row-->
@@ -86,6 +95,13 @@
                         <div class="row py-3">
                             <div class="col-10 w-100">
                                 <a class="btn mybg text-white" href="#ourPartaners" role="button"> <h6> Наши партнеры </h6></a>
+                            </div>
+                        </div>
+                        <!--Grid row-->
+                        <!--Grid row-->
+                        <div class="row py-3">
+                            <div class="col-10 w-100">
+                                <a class="btn mybg text-white" href="#contuctUs" role="button"> <h6> Наши контакты </h6></a>
                             </div>
                         </div>
                         <!--Grid row-->
@@ -102,7 +118,6 @@
         <!-- Content -->
     </div>
     <!-- Mask & flexbox options-->
-    </div>
     <!-- Full Page Intro -->
 </header>
 
@@ -318,7 +333,7 @@
                     <p class="text-black">Выражаем признательность и благодарность компании "Antares Consulting" 
                                           за сотрудничетсво, советы по ведению бизнеса и бухгалтерские консультации,которые в свою
                                           очередь привели к плодотворному сотруднечеству наших компаний.
-                                          Выраженное в уверенности и сохранности сложившихся деловых отношениях, а также надеемся 
+                                          Выражаем уверенность в сохранении сложившихся деловых отношениях, а также надеемся 
                                           на дальнейшее взаимовыгодное сотрудничество.</p>
 
 
@@ -417,7 +432,6 @@
 
     </section>
     <!--Section: Content-->
-</div>
 </div>
 <br>
 <h2 class="section-heading h1 pt-4 mb-0 text-white bg-black text-center" id="ourPartaners">Наши партнеры</h2>

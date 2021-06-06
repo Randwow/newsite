@@ -18,11 +18,21 @@ namespace WebApplication2
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
-            routes.MapRoute(
-                name: "Register",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Contact", action = "Contuct_Us", id = UrlParameter.Optional }
-            );
+            //routes.MapRoute(
+            //    name: "Register",
+            //    url: "{controller}/{action}/{id}",
+            //    defaults: new { controller = "Login", action = "Index", id = UrlParameter.Optional }
+            //);
+            //routes.MapRoute(
+            //    name: "Contact",
+            //    url: "{controller}/{action}/{id}",
+            //    defaults: new { controller = "Contact", action = "Index", id = UrlParameter.Optional }
+            //);
+            //routes.MapRoute(
+            //     name: "Test",
+            //     url: "{controller}/{action}/{id}",
+            //     defaults: new { controller = "Test", action = "Test", id = UrlParameter.Optional }
+            //);
         }
     }
 }

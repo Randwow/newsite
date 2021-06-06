@@ -43,9 +43,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Entities\Contact\EmailContact.cs" />
+    <Compile Include="Entities\User\Session.cs" />
     <Compile Include="Entities\User\UDbtable.cs" />
     <Compile Include="Entities\User\ULoginData.cs" />
     <Compile Include="Entities\User\ULoginResp.cs" />
+    <Compile Include="Entities\User\UserMinimal.cs" />
+    <Compile Include="Enums\URole.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -57,8 +61,6 @@
       <Name>eUseControl.Helpers</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Enums\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
